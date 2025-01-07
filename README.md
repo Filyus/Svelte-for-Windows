@@ -10,6 +10,7 @@ A modern desktop application built with Svelte and TypeScript that interfaces wi
 - Native Windows API integration using FFI (Foreign Function Interface)
 - WebSocket-based communication between frontend and backend
 - Hono-powered backend server for handling API requests
+- Runtime type checking and validation using Zod with Hono middleware
 - Real-time updates and event handling
 
 ## ⚠️ Security Notice
