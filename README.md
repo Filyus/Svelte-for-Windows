@@ -40,13 +40,23 @@ This application opens local ports for communication:
 │   │   ├── client.ts     # WebSocket client implementation
 │   │   └── winapi.ts     # Windows API integrations
 │   ├── App.svelte        # Main application component
-│   └── server.ts         # Backend server implementation
-├── public/               # Public static files
-├── package.json         # Project dependencies and scripts
-├── svelte.config.js     # Svelte configuration
-├── tsconfig.json        # TypeScript configuration
-├── vite.config.ts       # Vite build configuration
-└── README.md           # Project documentation
+│   ├── app.css          # Global styles
+│   ├── main.ts          # Application entry point
+│   ├── server.ts        # Backend server implementation
+│   └── vite-env.d.ts    # Vite environment types
+├── .github/             # GitHub configuration and assets
+├── .vscode/            # VS Code configuration
+├── dist/               # Build output directory
+├── public/             # Optional public static files
+├── index.html          # HTML entry point
+├── package.json        # Project dependencies and scripts
+├── svelte.config.js    # Svelte configuration
+├── tsconfig.json       # Base TypeScript configuration
+├── tsconfig.app.json   # Frontend TypeScript configuration
+├── tsconfig.node.json  # Vite/Node TypeScript configuration
+├── tsconfig.server.json # Backend TypeScript configuration
+├── vite.config.ts      # Vite build configuration
+└── README.md          # Project documentation
 ```
 
 ## Getting Started
