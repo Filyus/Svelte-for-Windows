@@ -1,11 +1,11 @@
-import type { ApiType } from './api';
+import type { ApiType } from './api.js';
 
 // Client-side API functions
 export async function fetchApi<T extends keyof ApiType>(
   endpoint: T,
   data?: ApiType[T]['input']
 ): Promise<ApiType[T]['output']> {
-  const response = await fetch(`http://localhost:3000/api/${endpoint}`, {
+  const response = await fetch(`http://localhost:3000/api/${String(endpoint)}`, {
     method: data ? 'POST' : 'GET',
     headers: {
       'Content-Type': 'application/json',

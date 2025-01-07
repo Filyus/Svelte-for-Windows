@@ -1,5 +1,5 @@
-import { fetchApi } from './client';
-import type { ApiType } from './api';
+import { fetchApi } from './client.js';
+import type { ApiType } from './api.js';
 
 // Type-safe Windows API client
 class WindowsAPIClient {

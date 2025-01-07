@@ -7,9 +7,18 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['ffi-rs']  // Exclude ffi-rs from optimization
   },
+  base: './',
   build: {
+    outDir: 'dist/client',
+    emptyOutDir: true,
+    assetsDir: 'assets',
     rollupOptions: {
-      external: [/\.node$/]  // Mark .node files as external
+      external: [/\.node$/],  // Mark .node files as external
+      output: {
+        assetFileNames: 'assets/[name].[hash][extname]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
+      }
     }
   },
   server: {

@@ -1,5 +1,5 @@
 import { serve } from '@hono/node-server';
-import { app, cleanupApi } from './lib/api';
+import { app, cleanupApi } from './lib/api.js';
 
 let server: ReturnType<typeof serve> | null = null;
 
