@@ -72,10 +72,15 @@ This will concurrently run the Vite development server for the frontend and the 
 
 ## Scripts
 
-- `npm run dev` - Start development servers (frontend + backend)
-- `npm run build` - Build the application for production
-- `npm run preview` - Preview the production build
-- `npm run check` - Run TypeScript checks
+- `npm run dev` - Start development servers (frontend + backend) concurrently
+- `npm run dev:client` - Start Vite development server for frontend only
+- `npm run dev:server` - Start TypeScript backend server with hot reload
+- `npm run build` - Build both client and server for production
+- `npm run build:client` - Build frontend only to dist/client
+- `npm run build:server` - Build backend server using TypeScript
+- `npm run preview` - Preview the production build (both client and server)
+- `npm run check` - Run TypeScript and Svelte checks
+- `npm run clean` - Remove the dist directory
 
 ## Technology Stack
 
