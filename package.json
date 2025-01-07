@@ -7,11 +7,15 @@
     "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "dev:client": "vite",
     "dev:server": "tsx watch src/server.ts",
+    "preview": "concurrently \"npm run preview:client\" \"npm run preview:server\"",
+    "preview:client": "vite preview --outDir dist/client",
+    "preview:server": "node dist/server/server.js",
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "tsc -p tsconfig.server.json",
-    "preview": "concurrently \"vite preview --outDir dist/client\" \"node dist/server/server.js\"",
-    "check": "concurrently \"svelte-check --tsconfig ./tsconfig.json\" \"tsc --noEmit -p tsconfig.server.json\"",
+    "check": "concurrently \"npm run check:client\" \"npm run check:server\"",
+    "check:client": "svelte-check --tsconfig ./tsconfig.json",
+    "check:server": "tsc --noEmit -p tsconfig.server.json",
     "clean": "rimraf dist"
   },
   "devDependencies": {
@@ -30,6 +34,7 @@
   "dependencies": {
     "@hono/node-server": "^1.13.7",
     "@hono/zod-validator": "^0.4.2",
+    "envalid": "^8.0.0",
     "ffi-rs": "^1.2.2",
     "hono": "^4.6.16",
     "ws": "8.18.0",
